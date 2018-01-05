@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_background"
+    android:orientation="horizontal">
+
+
+
+    <com.skyfishjy.library.RippleBackground
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/content"
+        app:rb_color="@color/dark_blue"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        app:rb_duration="3000"
+        app:rb_scale="6">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/refreshFab"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_refresh"
+            android:padding="10dp"
+            app:backgroundTint="@android:color/white"
+            android:tint="@color/dark_blue"
+            app:elevation="4dp" />
+    <com.kawika.blueetoothtracker.wheel.CircleMenuLayout
+        android:id="@+id/id_menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circle_line"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+            android:id="@+id/dummyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </RelativeLayout>
+
+    </com.kawika.blueetoothtracker.wheel.CircleMenuLayout>
+    </com.skyfishjy.library.RippleBackground>
+
+    <RelativeLayout
+        android:id="@+id/centerMenuRelativeLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profileImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/my_avatar"
+                android:layout_gravity="center"
+                tools:ignore="VectorDrawableCompat" />
+            <ProgressBar
+                android:id="@+id/imageProgressBar"
+                style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <!--<ImageView-->
+        <!--android:layout_width="64dp"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:id="@+id/centerImage"-->
+        <!--android:src="@drawable/my_avatar"/>-->
+
+    </RelativeLayout>
+</RelativeLayout>
